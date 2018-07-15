@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sessions</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <h1>Sessions</h1>
+    <nav>
+      <ul>
+        <li class='nav-all'>SIGN IN</li>
+        <li class='nav-all'>REGISTER</li>
+      </ul>
+    </nav>
+    <hr>
+    <%= yield %>
+  </body>
+</html>
