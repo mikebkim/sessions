@@ -1,7 +1,9 @@
-<h1>Home Page</h1>
-  <nav>
-      <ul>
-        <li>FIND A TUTOR</li>
-        <li>INSTRUMENTS</li>
-      </ul>
-    </nav>
+<% unless current_student || current_teacher %>
+<%= link_to "Student", new_student_path, class: "link-button" %>
+
+<%= link_to "Teacher", new_teacher_path, class: "link-button" %>
+<% end %>
+
+<%= session[:student_id] ? "student id: #{session[:student_id]}" : 'NIL' %>
+<br>
+<%= session[:teacher_id] ? "teacher id: #{session[:teacher_id]}" : 'NIL' %>

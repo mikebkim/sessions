@@ -12,14 +12,26 @@
 
   <body>
 
+  <header><%= image_tag("banner.jpg", :alt => "banner")%></header>
+
   <h1>Sessions</h1>
+
     <nav>
       <ul>
-        <li class='nav-all'>SIGN IN</li>
-        <li class='nav-all'>REGISTER</li>
+        <li class='nav-all'>
+          <% if current_student %>
+          Welcome, <%= current_student.name %>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <%= link_to 'LOG OUT', session_path(current_student), method: :delete %>
+          <% else %>
+          <%= link_to 'LOG IN', login_path %>
+          <% end %>  
+        </li>
       </ul>
     </nav>
+
     <hr>
+
     <%= yield %>
   </body>
 </html>

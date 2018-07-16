@@ -1,14 +1,20 @@
 class StudentsController < ApplicationController
+   
+    def index
+        @subjects = Subject.all
+    end
+
     def new
         @student = Student.new
     end
 
     def create
-        @student = Student.new(user_params)
-            if @student.save
+        @student = Student.new(student_params)
+        if @student.save
+            session[:student_id] = @student.id
             flash[:notice] = "You have successfully signed up!"
-            redirect_to root_path
-            else
+            redirect_to students_path
+        else
             render :new
         end
     end
@@ -16,7 +22,7 @@ class StudentsController < ApplicationController
     private
 
     def student_params
-        params.require(:user).permit(:name, :email, :password, :password_confirmation)
+        params.require(:student).permit(:name, :email, :password, :password_confirmation)
     end
 
 end

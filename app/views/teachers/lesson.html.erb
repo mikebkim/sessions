@@ -1,0 +1,15 @@
+<h1>Lesson Appointments</h1>
+
+ <%= form_for @teacher do |f| %>
+    <%= f.label :time%>
+    <br>
+    <%= f.text_field :time%>
+    <br>
+    <%= f.label :subject%>
+    <br>
+    <%= f.text_area :subject%>
+    <%= f.hidden_field :teacher_id, value: params[:id] %>
+
+    <br>
+    <%= f.submit 'Add Post'%>
+<% end %> 
