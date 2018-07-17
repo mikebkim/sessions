@@ -1,5 +1,8 @@
 <h1>Instruments</h1>
-    <ul>
-       <% @subjects.each do |subject| %>
-       <li><%= link_to subject.instrument, subject_path(subject) %></li>
-    </ul>
+
+<div id="ins-select">
+    <%= form_with url: student_form_students_path do %> 
+    <%= select_tag 'instrument', options_for_select(@subjects.map { |s| s.instrument }, @subjects.first.instrument) %>
+    <%= submit_tag 'Submit' %>
+    <% end %>
+</div>

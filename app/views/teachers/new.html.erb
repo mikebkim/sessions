@@ -10,13 +10,13 @@
       </ul>
     </div>
   <% end %>
+   <div class="field">
+    <%= f.label :instrument %>
+    <%= f.collection_select :instrument, Teacher::INSTRUMENTS, :to_s, :to_s, include_blank: false %>
+  </div>
   <div class="field">
     <%= f.label :name %>
     <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :instrument %>
-    <%= f.text_field :instrument %>
   </div>
   <div class="field">
     <%= f.label :email %>

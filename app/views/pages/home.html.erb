@@ -1,9 +1,9 @@
-<% unless current_student || current_teacher %>
-<%= link_to "Student", new_student_path, class: "link-button" %>
+<h1>Are You A Student Or Teacher?</h1>
 
-<%= link_to "Teacher", new_teacher_path, class: "link-button" %>
-<% end %>
-
-<%= session[:student_id] ? "student id: #{session[:student_id]}" : 'NIL' %>
-<br>
-<%= session[:teacher_id] ? "teacher id: #{session[:teacher_id]}" : 'NIL' %>
+<nav>
+    <% unless current_student || current_teacher %>
+    <%= link_to "Student", new_student_path, class: "link-button" %>
+    &nbsp;&nbsp;|&nbsp;&nbsp;
+    <%= link_to "Teacher", new_teacher_path, class: "link-button" %>
+    <% end %>
+</nav>

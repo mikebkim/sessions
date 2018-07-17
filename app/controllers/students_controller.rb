@@ -8,6 +8,11 @@ class StudentsController < ApplicationController
         @student = Student.new
     end
 
+    def student_form
+        instrument = params[:instrument]
+        redirect_to teachers_path + "?instrument=#{instrument.downcase!}"
+    end
+
     def create
         @student = Student.new(student_params)
         if @student.save

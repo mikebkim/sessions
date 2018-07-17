@@ -1,5 +1,11 @@
 class TeachersController < ApplicationController
    
+    def index
+        if !params[:instrument].blank?
+            @teachers = Teacher.where(instrument: params[:instrument].capitalize)
+        end
+    end
+
     def new
         @teacher = Teacher.new
     end
@@ -18,7 +24,7 @@ class TeachersController < ApplicationController
     private
 
     def teacher_params
-        params.require(:teacher).permit(:name, :email, :password, :password_confirmation)
+        params.require(:teacher).permit(:name, :email, :password, :password_confirmation, :instrument)
     end
 
 end

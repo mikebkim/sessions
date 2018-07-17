@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-array = ['Guitar', 'Piano', 'Clarinet']
-array.each do |instrument|
-    Subject.create({instrument: instrument})
-end
+# array = ['Guitar', 'Piano', 'Clarinet']
+# array.each do |instrument|
+#     Subject.create({instrument: instrument})
+# end

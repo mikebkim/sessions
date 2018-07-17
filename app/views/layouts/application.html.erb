@@ -7,31 +7,34 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
   </head>
 
   <body>
 
-  <header><%= image_tag("banner.jpg", :alt => "banner")%></header>
+  <nav>
+    <ul class='log-btn'>
+      <% unless current_student || current_teacher %>
+      <%= link_to 'LOG IN', login_path %>
+      <% else %>
+        <% if current_student %>
+        Welcome, <%= current_student.name %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'LOG OUT', destroy_student_session_path(current_student), method: :delete %>
+        <% end %>
+        <% if current_teacher %>
+        Welcome, <%= current_teacher.name %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'LOG OUT', destroy_teacher_session_path(current_teacher), method: :delete %>
+        <% end %>
+      <% end %>
+    </ul>
+  </nav>
 
-  <h1>Sessions</h1>
+  <h1><span style="color: black; font-size: 70px;">&#119070;</span>essions</h1>
 
-    <nav>
-      <ul>
-        <li class='nav-all'>
-          <% if current_student %>
-          Welcome, <%= current_student.name %>
-          &nbsp;&nbsp;|&nbsp;&nbsp;
-          <%= link_to 'LOG OUT', session_path(current_student), method: :delete %>
-          <% else %>
-          <%= link_to 'LOG IN', login_path %>
-          <% end %>  
-        </li>
-      </ul>
-    </nav>
+  <hr>
 
-    <hr>
-
-    <%= yield %>
+  <%= yield %>
   </body>
 </html>

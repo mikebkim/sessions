@@ -6,5 +6,8 @@ class Teacher < ApplicationRecord
    
     has_many :lessons
     has_many :students
+    has_many :schedules
+
+    INSTRUMENTS = ['Guitar', 'Piano', 'Clarinet']
 
 end
