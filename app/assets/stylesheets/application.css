@@ -15,7 +15,7 @@
  */
 
 * {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Julius Sans One', sans-serif;
     color: black;
     text-decoration: none;
 }
@@ -35,6 +35,7 @@ img {
 
 .log-btn {
     text-align: right;
+    margin: 20px 20px 0px 20px;
 }
 
 h1 {
@@ -45,6 +46,7 @@ h1 {
 .nav-all {
     display: flex;
     justify-content: center;
+    margin: 20px auto;
 }
 
 .reg-all {
@@ -53,31 +55,102 @@ h1 {
     justify-content: center;
 }
 
-.field {
+.actions, .app-actions {
     display: flex;
     justify-content: center;
-}
-
-.actions {
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
 }
 
 nav {
     text-align: center;
 }
 
-#ins-select {
+.ins-select {
     display: flex;
     justify-content: center;
 }
 
 .app {
-    border: solid black 1px;
+    border: solid black 2px;
     text-align: center;
     margin: 10px 300px;
 }
 
 div {
     margin: 5px 0px;
+}
+
+.app-title {
+    font-size: 20px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.delete-btn {
+    text-align: right;
+    margin: 10px 10px;
+}
+
+.field {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.app-form {
+    display: flex;
+    justify-content: center;
+    max-width: 500px;
+    background: #f4f7f8;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.break {
+    text-align: center;
+    margin: 0 50px;
+}
+
+input {
+    margin: 0 auto;
+    background: white;
+    border: none;
+    border-radius: 1px;
+    font-size: 16px;
+    outline: 0;
+    padding: 7px;
+    width: 60%;
+    box-sizing: border-box; 
+    background-color: white;
+    color:black;
+    text-align: center;
+    cursor: pointer;
+}
+
+select {
+    margin: 0 auto;
+    border: solid black 1px;
+    width: 50%;
+    cursor: pointer;
+}
+
+label {
+    margin: 10px auto;
+    margin-left: 2px;
+}
+
+.teach-sel {
+    text-align: center;
+    list-style-type: none;
+}
+
+li {
+    margin: 15px auto;
+    text-decoration: underline;
 }

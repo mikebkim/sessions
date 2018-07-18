@@ -1,5 +1,5 @@
 <h1>Select Teacher</h1>
-    <ul>
+    <ul class="teach-sel">
         <% @teachers.each do |teacher| %>
          <li><%= link_to teacher.name, "/teachers/#{teacher.id}" %></li>
         <% end %>

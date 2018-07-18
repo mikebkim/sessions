@@ -4,7 +4,7 @@ class Teacher < ApplicationRecord
 
     validates :email, presence: true, uniqueness: true
    
-    has_many :lessons
+    has_many :lessons, dependent: :destroy
 
     INSTRUMENTS = ['Guitar', 'Piano', 'Clarinet']
 

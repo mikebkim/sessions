@@ -1,28 +1,25 @@
 <h1>My Appointments</h1>
 
-<%# @lessons.each do |lesson| %>
-    <!-- <div class="app">
-        <%# if current_student %>
-            <p><%#= lesson.teacher.name %></p>
-        <%# elsif current_teacher %>
-            <%# p '*' * 100 %>
-            <% #p lesson %>
-            <p><%#= lesson.appointment.student.name %></p>
-        <%# end %>
-        <p> <%#= lesson.lesson.time %> </p>
-        <p> <%#= lesson.subject %> </p>
-        <p> <%#= lesson.homework %> </p>
-
-    </div> -->
-<%# end %>
-
 <% if @appointments %>
     <% @appointments.each do |appointment| %>
         <div class="app">
+            <p class="app-title">Student Contact</p>
             <p><%= appointment.student.name %></p>
+            <p><%= appointment.student.email %></p>
+            <p><%= appointment.student.phone %></p>
+            <hr>
+            <p class="app-title">Address</p>
+            <p><%= appointment.student.address %></p>
+            <p><%= appointment.student.address_2 %></p>
+            <p><%= appointment.student.city %></p>
+            <p><%= appointment.student.state %></p>
+            <p><%= appointment.student.zipcode %></p>
+            <hr>
+            <p class="app-title">Date/Time</p>
             <p><%= appointment.lesson.time %></p>
             <p><%= appointment.lesson.subject %></p>
             <p><%= appointment.lesson.homework %></p>
+            <p class="delete-btn"><%= link_to 'Delete', appointment_path(appointment), method: :delete %></p>
         </div>
     <% end %>   
 <% end %>
@@ -30,10 +27,23 @@
 <% if @lessons %>
     <% @lessons.each do |lesson| %>
         <div class="app">
+            <p class="app-title">Teacher Contact</p>
             <p><%= lesson.teacher.name %></p>
+            <p><%= lesson.teacher.email %></p>
+            <p><%= lesson.teacher.phone %></p>
+            <hr>
+            <p class="app-title">Address</p>
+            <p><%= lesson.teacher.address %></p>
+            <p><%= lesson.teacher.address_2 %></p>
+            <p><%= lesson.teacher.city %></p>
+            <p><%= lesson.teacher.state %></p>
+            <p><%= lesson.teacher.zipcode %></p>
+            <hr>
+            <p class="app-title">Date/Time</p>
             <p><%= lesson.time %></p>
             <p><%= lesson.subject %></p>
             <p><%= lesson.homework %></p>
+            <p class="delete-btn"><%= link_to 'Delete', lesson_path(lesson), method: :delete %></p>
         </div>
     <% end %>    
 <% end %>

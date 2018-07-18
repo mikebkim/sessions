@@ -4,15 +4,16 @@
 
     <%= form_for @lesson do |f| %>
     <div class="app-form">
-        <%= f.label :subject %>
+        <%= f.label :subject, "Instrument" %>
         <%= f.text_field :subject %>
     </div>
     <div class="app-form">
-        <%= f.label :homework %>
+        <%= f.label :homework, "Subject" %>
         <%= f.text_field :homework %>
     </div>
 
-    <div>
+    <div class="app-form">
+    <%= f.label :time, "Date / Time" %>
     <%= f.datetime_local_field :time %>
     </div>
 
@@ -28,5 +29,6 @@
         <p> <%= lesson.time %> </p>
         <p> <%= lesson.subject %> </p>
         <p> <%= lesson.homework %> </p>
+        <p><%= link_to 'Delete', lesson_path(lesson), method: :delete %></p>
     </div>
 <% end %>

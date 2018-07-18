@@ -19,6 +19,36 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="break">- Address -</div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :address_2 %>
+    <%= f.text_field :address_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %>
+    <%= f.collection_select :state, ::States.values, :to_s, :to_s, include_blank: false %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %>
+    <%= f.text_field :zipcode %>
+  </div>
+
+  <div class="break">- Login Info -</div>
+
+  <div class="field">
     <%= f.label :email %>
     <%= f.text_field :email %>
   </div>
@@ -27,7 +57,7 @@
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, "Confirm Password" %>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions"><%= f.submit %></div>

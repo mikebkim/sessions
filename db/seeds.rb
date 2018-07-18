@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Subject.destroy_all
+
 array = ['Guitar', 'Piano', 'Clarinet']
 array.each do |instrument|
     Subject.create!({instrument: instrument, student_id: Student.first.id})

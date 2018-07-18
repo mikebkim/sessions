@@ -1,6 +1,6 @@
 <h1>Instruments</h1>
 
-<div id="ins-select">
+<div class="ins-select">
     <%= form_with url: student_form_students_path do %> 
     <%= select_tag 'instrument', options_for_select(@subjects.map { |s| s.instrument }, @subjects.first.instrument) %>
     <%= submit_tag 'Submit' %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_17_220853) do
+ActiveRecord::Schema.define(version: 2018_07_18_174004) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,10 @@ ActiveRecord::Schema.define(version: 2018_07_17_220853) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -62,6 +66,10 @@ ActiveRecord::Schema.define(version: 2018_07_17_220853) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "address_2"
+    t.string "city"
+    t.string "state"
+    t.string "zipcode"
   end
 
   add_foreign_key "appointments", "lessons"
