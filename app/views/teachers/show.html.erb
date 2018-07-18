@@ -1,1 +1,12 @@
-<h1>My Appointments</h1>
+<h1>Schedule Appointment</h1>
+
+<% @teacher.lessons.each do |lesson| %>
+    <% if lesson.appointment.nil? %>
+        <div class="app">
+            <p> <%= lesson.time %> </p>
+            <p> <%= lesson.subject %> </p>
+            <p> <%= lesson.homework %> </p>
+            <p> <%= link_to "Book", lesson_appointments_path(lesson), method: :post %> </p>
+        </div>
+    <% end %>
+<% end %>

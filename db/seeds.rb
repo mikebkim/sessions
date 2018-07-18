@@ -10,3 +10,17 @@
 # array.each do |instrument|
 #     Subject.create({instrument: instrument})
 # end
+
+Lesson.destroy_all
+
+Lesson.create([
+    {teacher: Teacher.first, subject: 'Tuba', homework: 'Play it again Sam', time: Time.now()},
+    {teacher: Teacher.first, subject: 'Flute', homework: 'It is fun', time: Time.now()}
+])
+
+Appointment.destroy_all
+
+Appointment.create([
+    {student: Student.first, lesson: Lesson.first},
+    {student: Student.first, lesson: Lesson.second}
+])

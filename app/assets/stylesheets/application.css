@@ -67,7 +67,17 @@ nav {
     text-align: center;
 }
 
-  #ins-select {
-      display: flex;
-      justify-content: center;
-  }
+#ins-select {
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    border: solid black 1px;
+    text-align: center;
+    margin: 10px 300px;
+}
+
+div {
+    margin: 5px 0px;
+}

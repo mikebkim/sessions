@@ -15,7 +15,11 @@ Rails.application.routes.draw do
 
     resources :subjects
 
-    resources :schedule
+    resources :lessons do
+        resources :appointments, shallow: true, only: [:create, :destroy]
+    end
+
+    get '/appointments', to: 'appointments#index', as: 'appointments'
 
     get '/students/student_form', to: 'students#index'
 

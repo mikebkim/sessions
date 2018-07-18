@@ -1,0 +1,32 @@
+<h1>Schedule Lessons</h1>
+
+<div>
+
+    <%= form_for @lesson do |f| %>
+    <div class="app-form">
+        <%= f.label :subject %>
+        <%= f.text_field :subject %>
+    </div>
+    <div class="app-form">
+        <%= f.label :homework %>
+        <%= f.text_field :homework %>
+    </div>
+
+    <div>
+    <%= f.datetime_local_field :time %>
+    </div>
+
+    <div class="app-actions"><%= f.submit %></div>
+    <% end %>
+
+</div>
+
+
+
+<% @lessons.each do |lesson| %>
+    <div class="app">
+        <p> <%= lesson.time %> </p>
+        <p> <%= lesson.subject %> </p>
+        <p> <%= lesson.homework %> </p>
+    </div>
+<% end %>

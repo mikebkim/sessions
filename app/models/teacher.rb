@@ -5,8 +5,6 @@ class Teacher < ApplicationRecord
     validates :email, presence: true, uniqueness: true
    
     has_many :lessons
-    has_many :students
-    has_many :schedules
 
     INSTRUMENTS = ['Guitar', 'Piano', 'Clarinet']
 

@@ -1,0 +1,39 @@
+<h1>My Appointments</h1>
+
+<%# @lessons.each do |lesson| %>
+    <!-- <div class="app">
+        <%# if current_student %>
+            <p><%#= lesson.teacher.name %></p>
+        <%# elsif current_teacher %>
+            <%# p '*' * 100 %>
+            <% #p lesson %>
+            <p><%#= lesson.appointment.student.name %></p>
+        <%# end %>
+        <p> <%#= lesson.lesson.time %> </p>
+        <p> <%#= lesson.subject %> </p>
+        <p> <%#= lesson.homework %> </p>
+
+    </div> -->
+<%# end %>
+
+<% if @appointments %>
+    <% @appointments.each do |appointment| %>
+        <div class="app">
+            <p><%= appointment.student.name %></p>
+            <p><%= appointment.lesson.time %></p>
+            <p><%= appointment.lesson.subject %></p>
+            <p><%= appointment.lesson.homework %></p>
+        </div>
+    <% end %>   
+<% end %>
+
+<% if @lessons %>
+    <% @lessons.each do |lesson| %>
+        <div class="app">
+            <p><%= lesson.teacher.name %></p>
+            <p><%= lesson.time %></p>
+            <p><%= lesson.subject %></p>
+            <p><%= lesson.homework %></p>
+        </div>
+    <% end %>    
+<% end %>
