@@ -8,7 +8,7 @@
 
 array = ['Guitar', 'Piano', 'Clarinet']
 array.each do |instrument|
-    Subject.create!({instrument: instrument})
+    Subject.create!({instrument: instrument, student_id: Student.first.id})
 end
 
 # Lesson.destroy_all
