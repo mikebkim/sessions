@@ -15,7 +15,7 @@ class LessonsController < ApplicationController
 
     def destroy
         lesson = Lesson.find(params[:id])
-        lesson.appointment.destroy 
+        lesson.try(:appointment).try(:destroy)
         lesson.destroy 
         redirect_to appointments_path
     end

@@ -43,6 +43,11 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
 .nav-all {
     display: flex;
     justify-content: center;
@@ -96,7 +101,7 @@ div {
     display: flex;
     justify-content: center;
     max-width: 500px;
-    background: #f4f7f8;
+    background: #94d1e0;
     margin: 10px auto;
     padding: 20px;
     border-radius: 8px;
@@ -106,7 +111,7 @@ div {
     display: flex;
     justify-content: center;
     max-width: 500px;
-    background: #f4f7f8;
+    background: #94d1e0;
     margin: 10px auto;
     padding: 20px;
     border-radius: 8px;
@@ -134,15 +139,20 @@ input {
 }
 
 select {
+    background-color: #94d1e0;
     margin: 0 auto;
-    border: solid black 1px;
+    border: solid white 1px;
     width: 50%;
     cursor: pointer;
+    color: white;
 }
 
 label {
+    display: flex;
+    justify-content: center;
     margin: 10px auto;
     margin-left: 2px;
+    color: black;
 }
 
 .teach-sel {

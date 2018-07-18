@@ -8,7 +8,7 @@
 
 Subject.destroy_all
 
-array = ['Guitar', 'Piano', 'Clarinet']
+array = ['Guitar', 'Piano', 'Clarinet', 'Violin', 'Drums', 'Saxophone', 'Flute', 'Trumpet']
 array.each do |instrument|
     Subject.create!({instrument: instrument, student_id: Student.first.id})
 end
