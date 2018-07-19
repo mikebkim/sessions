@@ -1,0 +1,58 @@
+<h1>My Profile</h1>
+
+<%= form_for @user, {url: '/profile'} do |f| %>
+  <% if @user.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.label :phone %>
+    <div class="field">
+    <%= f.text_field :phone %>
+    </div>
+
+  <div class="break"><h2>- Address -</h2></div>
+
+  <%= f.label :address, "Address 1" %>
+    <div class="field">
+    <%= f.text_field :address %>
+    </div>
+  <%= f.label :address_2 %>
+    <div class="field">
+    <%= f.text_field :address_2 %>
+    </div>
+  <%= f.label :city %>
+    <div class="field">
+    <%= f.text_field :city %>
+    </div>
+  <%= f.label :state %>
+    <div class="field">
+    <%= f.collection_select :state, ::States.values, :to_s, :to_s, include_blank: false %>
+    </div>
+  <%= f.label :zipcode %>
+    <div class="field">
+    <%= f.text_field :zipcode %>
+    </div>
+
+  <div class="break"><h2>- Login Info -</h2></div>
+
+  <%= f.label :email %>
+    <div class="field">
+    <%= f.text_field :email %>
+    </div>
+  <%= f.label :password %>
+    <div class="field">
+    <%= f.password_field :password %>
+    </div>
+  <%= f.label :password_confirmation, "Confirm Password" %>
+    <div class="field">
+    <%= f.password_field :password_confirmation %>
+    </div>
+  <div class="actions"><%= f.submit %></div>
+<% end %>

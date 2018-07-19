@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
     resources :teachers, only: [:new, :create, :index, :show]
 
+    get '/profile', to: 'users#edit', as: 'profile'
+
+    patch '/profile', to: 'users#update'
+
     resources :students, only: [:new, :create, :index, :show] do
         post 'student_form', on: :collection
     end

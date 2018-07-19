@@ -39,15 +39,18 @@
 
     <% if current_student || current_teacher %>
       <%= link_to 'INSTRUMENTS', students_path %>
-        &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
       <%= link_to 'MY APPOINTMENTS', appointments_path %>
+      &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+      <%= link_to 'MY PROFILE', profile_path %>
       <% if current_teacher %>
         &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'SCHEDULE LESSONS', lessons_path %> 
       <% end %>
     <% end %>
   </nav>
-
+  
   <%= yield %>
+
   </body>
 </html>

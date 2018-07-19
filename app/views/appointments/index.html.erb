@@ -19,7 +19,7 @@
             <p><%= appointment.lesson.time %></p>
             <p><%= appointment.lesson.subject %></p>
             <p><%= appointment.lesson.homework %></p>
-            <p><%= link_to 'Delete', appointment_path(appointment), method: :delete %></p>
+            <p><%= link_to 'Delete', appointment_path(appointment), method: :delete, class: "delete-btn" %></p>
         </div>
     <% end %>   
 <% end %>
@@ -43,7 +43,7 @@
             <p><%= lesson.time %></p>
             <p><%= lesson.subject %></p>
             <p><%= lesson.homework %></p>
-            <p><%= link_to 'Delete', lesson_path(lesson), method: :delete %></p>
+            <p><%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-btn" %></p>
         </div>
     <% end %>    
 <% end %>
