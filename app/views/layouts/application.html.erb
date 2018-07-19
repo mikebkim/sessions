@@ -27,13 +27,13 @@
         &nbsp;&nbsp;|&nbsp;&nbsp;
         <%= link_to 'LOG OUT', destroy_teacher_session_path(current_teacher), method: :delete %>
         <% end %>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <%= link_to 'MY PROFILE', profile_path %>
       <% end %>
     </div>
   </nav>
 
-  <h1><a href='/'><span style="color: white; font-size: 70px;">&#119070;</span>essions</a></h1>
-
-  <hr>
+  <h1><a href='/'><span style="color: #94d1e0;; font-size: 70px;">&#119070;</span>essions</a></h1>
 
   <nav class='nav-all'>
 
@@ -41,8 +41,6 @@
       <%= link_to 'INSTRUMENTS', students_path %>
       &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
       <%= link_to 'MY APPOINTMENTS', appointments_path %>
-      &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-      <%= link_to 'MY PROFILE', profile_path %>
       <% if current_teacher %>
         &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'SCHEDULE LESSONS', lessons_path %> 

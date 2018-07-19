@@ -1,4 +1,4 @@
-<h1>My Profile</h1>
+<h2>My Profile</h2>
 
 <%= form_for @user, {url: '/profile'} do |f| %>
   <% if @user.errors.any? %>
@@ -17,7 +17,7 @@
     <%= f.text_field :phone %>
     </div>
 
-  <div class="break"><h2>- Address -</h2></div>
+  <div class="break"><h3>- Address -</h3></div>
 
   <%= f.label :address, "Address 1" %>
     <div class="field">
@@ -40,7 +40,7 @@
     <%= f.text_field :zipcode %>
     </div>
 
-  <div class="break"><h2>- Login Info -</h2></div>
+  <div class="break"><h3>- Login Info -</h3></div>
 
   <%= f.label :email %>
     <div class="field">

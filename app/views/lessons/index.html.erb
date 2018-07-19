@@ -1,30 +1,35 @@
-<h1>Schedule Lessons</h1>
+<h2>Schedule Lessons</h2>
 
-<div>
-
-    <%= form_for @lesson do |f| %>
-    <%= f.label :subject, "Instrument" %>
-        <div class="app-form">
-        <%= f.text_field :subject %>
-        </div>
-    <%= f.label :homework, "Subject" %>
-        <div class="app-form">
-        <%= f.text_field :homework %>
-        </div>      
-    <%= f.label :time, "Date / Time" %>
-        <div class="app-form">
-        <%= f.datetime_local_field :time %>
-        </div>
-    <div class="app-actions"><%= f.submit %></div>
-    <% end %>
-
+<div class="col-less">
+    <div id="lesson-flex">
+        <div>
+        <%= form_for @lesson do |f| %>
+        <%= f.label :subject, "Instrument" %>
+            <div class="app-form">
+            <%= f.text_field :subject %>
+            </div>
+        <%= f.label :homework, "Subject" %>
+            <div class="app-form">
+            <%= f.text_field :homework %>
+            </div>      
+        <%= f.label :time, "Date / Time" %>
+            <div class="app-form">
+            <%= f.datetime_local_field :time %>
+            </div>
+        <div class="app-actions"><%= f.submit %></div>
+        <% end %>
+    </div>
 </div>
 
-<% @lessons.each do |lesson| %>
-    <div class="app">
-        <p> <%= lesson.time %> </p>
-        <p> <%= lesson.subject %> </p>
-        <p> <%= lesson.homework %> </p>
-        <p> <%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-btn" %> </p>
+<div class="col-less-2">
+        <% @lessons.each do |lesson| %>
+            <div class="app">
+                <p> <%= lesson.time %> </p>
+                <p> <%= lesson.subject %> </p>
+                <p> <%= lesson.homework %> </p>
+                <p> <%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-lsn" %> </p>
+            </div>
+        <% end %>
     </div>
-<% end %>
+</div>
+

@@ -1,4 +1,4 @@
-<h1>Register Student</h1>
+<h2>Register Student</h2>
 <%= form_for @student do |f| %>
   <% if @student.errors.any? %>
     <div class="error_messages">
@@ -20,7 +20,7 @@
     <%= f.text_field :phone %>
     </div>
 
-  <div class="break"><h2>- Address -</h2></div>
+  <div class="break"><h3>- Address -</h3></div>
 
   <%= f.label :address, "Address 1" %>
     <div class="field">
@@ -43,7 +43,7 @@
     <%= f.text_field :zipcode %>
     </div>
 
-  <div class="break"><h2>- Login Info -</h2></div>
+  <div class="break"><h3>- Login Info -</h3></div>
 
   <%= f.label :email %>
     <div class="field">

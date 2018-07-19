@@ -6,6 +6,6 @@ class Teacher < ApplicationRecord
    
     has_many :lessons, dependent: :destroy
 
-    INSTRUMENTS = ['Guitar', 'Piano', 'Clarinet']
+    INSTRUMENTS = ['Clarinet', 'Drums', 'Flute', 'Guitar', 'Piano', 'Saxophone', 'Trumpet', 'Violin', 'Other']
 
 end
