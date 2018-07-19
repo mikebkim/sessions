@@ -3,32 +3,28 @@
 <div>
 
     <%= form_for @lesson do |f| %>
-    <div class="app-form">
-        <%= f.label :subject, "Instrument" %>
+    <%= f.label :subject, "Instrument" %>
+        <div class="app-form">
         <%= f.text_field :subject %>
-    </div>
-    <div class="app-form">
-        <%= f.label :homework, "Subject" %>
+        </div>
+    <%= f.label :homework, "Subject" %>
+        <div class="app-form">
         <%= f.text_field :homework %>
-    </div>
-
-    <div class="app-form">
+        </div>      
     <%= f.label :time, "Date / Time" %>
-    <%= f.datetime_local_field :time %>
-    </div>
-
+        <div class="app-form">
+        <%= f.datetime_local_field :time %>
+        </div>
     <div class="app-actions"><%= f.submit %></div>
     <% end %>
 
 </div>
-
-
 
 <% @lessons.each do |lesson| %>
     <div class="app">
         <p> <%= lesson.time %> </p>
         <p> <%= lesson.subject %> </p>
         <p> <%= lesson.homework %> </p>
-        <p><%= link_to 'Delete', lesson_path(lesson), method: :delete %></p>
+        <p> <%= link_to 'Delete', lesson_path(lesson), method: :delete %> </p>
     </div>
 <% end %>

@@ -15,13 +15,13 @@
  */
 
 * {
-    font-family: 'Julius Sans One', sans-serif;
-    color: black;
+    font-family: 'Didact Gothic', sans-serif;
+    color: white;
     text-decoration: none;
 }
 
 body {
-    background-color: white;
+    background-color: #96a5ad;
 }
 
 img {
@@ -41,6 +41,7 @@ img {
 h1 {
     font-size: 30px;
     text-align: center;
+    margin: 0 auto;
 }
 
 h2 {
@@ -66,19 +67,45 @@ h2 {
     cursor: pointer;
 }
 
+.app-actions {
+    display: flex;
+    background-color: #94d1e0;
+    margin: 20px auto;
+    padding: 5px;
+    border: solid white 5px;
+    max-width: 200px;
+}
+
+.actions {
+    display: flex;
+    background-color: #94d1e0;
+    margin: 20px auto;
+    padding: 5px;
+    border: solid white 5px;
+    max-width: 200px;
+}
+
+#instrument {
+    display: flex;
+    background-color: #94d1e0;
+    margin: 20px auto;
+    padding: 5px;
+    max-width: 200px;
+}
+
 nav {
     text-align: center;
 }
 
-.ins-select {
-    display: flex;
-    justify-content: center;
-}
-
 .app {
-    border: solid black 2px;
+    border: solid grey 2px;
     text-align: center;
     margin: 10px 300px;
+    background-color: #94d1e0;
+}
+
+p {
+    color: white;
 }
 
 div {
@@ -100,21 +127,21 @@ div {
 .field {
     display: flex;
     justify-content: center;
-    max-width: 500px;
+    max-width: 420px;
     background: #94d1e0;
-    margin: 10px auto;
-    padding: 20px;
-    border-radius: 8px;
+    margin: 0px auto;
+    padding: 15px;
+    border-radius: 30px;
 }
 
 .app-form {
     display: flex;
     justify-content: center;
-    max-width: 500px;
+    max-width: 420px;
     background: #94d1e0;
-    margin: 10px auto;
-    padding: 20px;
-    border-radius: 8px;
+    margin: 0px auto;
+    padding: 15px;
+    border-radius: 30px;
 }
 
 .break {
@@ -126,14 +153,14 @@ input {
     margin: 0 auto;
     background: white;
     border: none;
-    border-radius: 1px;
+    border-radius: 0px;
     font-size: 16px;
     outline: 0;
     padding: 7px;
-    width: 60%;
-    box-sizing: border-box; 
+    width: 75%;
+    box-sizing: border-box;
     background-color: white;
-    color:black;
+    color: black;
     text-align: center;
     cursor: pointer;
 }
@@ -145,6 +172,7 @@ select {
     width: 50%;
     cursor: pointer;
     color: white;
+    font-size: 16px;
 }
 
 label {
@@ -152,7 +180,7 @@ label {
     justify-content: center;
     margin: 10px auto;
     margin-left: 2px;
-    color: black;
+    color: white;
 }
 
 .teach-sel {

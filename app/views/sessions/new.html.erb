@@ -1,17 +1,17 @@
 <h1>Log In</h1>
 <p id="alert"><%= alert %></p>
 <%= form_tag sessions_path do %>
-  <div class="field"> 
-    <%= label_tag :login_type %>
+  <%= label_tag :login_type, "Student or Teacher?" %>
+    <div class="field"> 
     <%= select_tag "login_type", options_for_select(["Teacher", "Student"], "Pick One") %>
-  </div>
-  <div class="field">
-    <%= label_tag :email %>
+    </div>
+  <%= label_tag :email %>
+    <div class="field">
     <%= text_field_tag :email, params[:email] %>
-  </div>
-  <div class="field">
-    <%= label_tag :password %>
+    </div>
+  <%= label_tag :password %>
+    <div class="field">
     <%= password_field_tag :password %>
-  </div>
+    </div>
   <div class="actions"><%= submit_tag "Log In" %></div>
 <% end %>

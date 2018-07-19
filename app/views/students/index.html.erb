@@ -1,8 +1,8 @@
 <h1>Instruments</h1>
 
-<div class="ins-select">
-    <%= form_with url: student_form_students_path do %> 
-    <%= select_tag 'instrument', options_for_select(@subjects.map { |s| s.instrument }, @subjects.first.instrument) %>
-    <%= submit_tag 'Submit' %>
+<div>
+    <p><%= form_with url: student_form_students_path do %></p>
+    <p id="dropdown"><%= select_tag 'instrument', options_for_select(@subjects.map { |s| s.instrument }, @subjects.first.instrument) %></p>
+    <p class="actions"><%= submit_tag 'Submit' %></p>
     <% end %>
 </div>
