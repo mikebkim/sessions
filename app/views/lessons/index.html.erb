@@ -23,12 +23,14 @@
 
 <div class="col-less-2">
         <% @lessons.each do |lesson| %>
-            <div class="app">
-                <p> <%= lesson.time %> </p>
-                <p> <%= lesson.subject %> </p>
-                <p> <%= lesson.homework %> </p>
-                <p> <%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-lsn" %> </p>
-            </div>
+            <% if lesson.appointment.nil? %>
+                <div class="lessons-app">
+                    <p> <%= lesson.time.strftime("%m/%d/%Y - %l:%M%p") %> </p>
+                    <p> <%= lesson.subject %> </p>
+                    <p> <%= lesson.homework %> </p>
+                    <p> <%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-lsn" %> </p> 
+                </div>
+            <% end %>   
         <% end %>
     </div>
 </div>

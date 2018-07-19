@@ -2,6 +2,7 @@
 
 <% if @appointments %>
     <% @appointments.each do |appointment| %>
+    <div class="lesson-div">
         <div class="lesson-flex-main">
             <div class="lesson-flex">
                 <p class="app-title">Student Contact</p>
@@ -10,10 +11,12 @@
                 <p><%= appointment.student.phone %></p>
             </div>    
                 <hr color="white">
-            <div class="lesson-flex">    
+            <div class="lesson-flex">
                 <p class="app-title">Address</p>
                 <p><%= appointment.student.address %></p>
+                <% unless appointment.student.address_2.blank? %>
                 <p><%= appointment.student.address_2 %></p>
+                <% end %>
                 <p><%= appointment.student.city %></p>
                 <p><%= appointment.student.state %></p>
                 <p><%= appointment.student.zipcode %></p>
@@ -21,17 +24,20 @@
                 <hr color="white">
             <div class="lesson-flex">    
                 <p class="app-title">Date-Time-Subject</p>
-                <p><%= appointment.lesson.time %></p>
+                <p><%= appointment.lesson.time.strftime("%m/%d/%Y - %l:%M%p") %></p>
                 <p><%= appointment.lesson.subject %></p>
                 <p><%= appointment.lesson.homework %></p>
             </div>
         </div>
-        <%= link_to 'Delete', appointment_path(appointment), method: :delete, class: "delete-btn" %>
+        <div class="delete-div">
+        <p class="delete-btn"><%= link_to 'Delete', appointment_path(appointment), method: :delete %></p>
+    </div>
     <% end %>   
 <% end %>
 
 <% if @lessons %>
     <% @lessons.each do |lesson| %>
+    <div class="lesson-div">
         <div class="lesson-flex-main">
             <div class="lesson-flex">
                 <p class="app-title">Teacher Contact</p>
@@ -43,19 +49,23 @@
             <div class="lesson-flex">
                 <p class="app-title">Address</p>
                 <p><%= lesson.teacher.address %></p>
+                <% unless lesson.teacher.address_2.blank? %>
                 <p><%= lesson.teacher.address_2 %></p>
+                <% end %>
                 <p><%= lesson.teacher.city %></p>
                 <p><%= lesson.teacher.state %></p>
                 <p><%= lesson.teacher.zipcode %></p>
             </div>
                 <hr color="white">
-                <div class="lesson-flex">
+            <div class="lesson-flex">
                 <p class="app-title">Date-Time-Subject</p>
-                <p><%= lesson.time %></p>
+                <p><%= lesson.time.strftime("%m/%d/%Y - %l:%M%p") %></p>
                 <p><%= lesson.subject %></p>
                 <p><%= lesson.homework %></p>
             </div>
         </div>
-        <%= link_to 'Delete', lesson_path(lesson), method: :delete, class: "delete-btn" %>
+        <div class="delete-div">
+        <p class="delete-btn"><%= link_to 'Delete', lesson_path(lesson), method: :delete %></p>
+    </div>
     <% end %>    
 <% end %>

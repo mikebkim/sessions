@@ -1,10 +1,13 @@
 <h2>Register</h2>
-<h3>Are You A Student Or Teacher?</h3>
+<h4>Are You A Student Or Teacher?</h4>
 
-<nav>
-    <% unless current_student || current_teacher %>
-    <%= link_to "Student", new_student_path, class: "link-button" %>
-    &nbsp;&nbsp;|&nbsp;&nbsp;
-    <%= link_to "Teacher", new_teacher_path, class: "link-button" %>
-    <% end %>
+<nav class="register-flex">
+    <div class="register-btn">
+        <% unless current_student || current_teacher %>
+        <%= link_to "Student", new_student_path, class: "link-button" %>
+    </div>
+    <div class="register-btn">
+        <%= link_to "Teacher", new_teacher_path, class: "link-button" %>
+        <% end %>
+    </div>
 </nav>

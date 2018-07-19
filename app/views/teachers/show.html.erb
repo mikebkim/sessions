@@ -3,10 +3,10 @@
 <% @teacher.lessons.each do |lesson| %>
     <% if lesson.appointment.nil? %>
         <div class="app">
-            <p> <%= lesson.time %> </p>
+            <p> <%= lesson.time.strftime("%m/%d/%Y - %l:%M%p") %> </p>
             <p> <%= lesson.subject %> </p>
             <p> <%= lesson.homework %> </p>
-            <p> <%= link_to "Book", lesson_appointments_path(lesson), method: :post %> </p>
+            <p class="book-btn"> <%= link_to "Book", lesson_appointments_path(lesson), method: :post %> </p>
         </div>
     <% end %>
 <% end %>
