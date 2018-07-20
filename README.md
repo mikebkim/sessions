@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![alt text](https://i.imgur.com/O1bLERb.png "Logo Title Text 1")
 
-Things you may want to cover:
+# Sessions
 
-* Ruby version
+This is an application that allows students and teachers to connect through music.
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+* Ruby
+* Rails
+* HTML
+* CSS
 
-* Database creation
+## Getting Started
 
-* Database initialization
+[Sessions](https://sessionsmusic.herokuapp.com/)
 
-* How to run the test suite
+## Trello
 
-* Services (job queues, cache servers, search engines, etc.)
+[Trello](https://trello.com/b/vevMK5EB/wdi-project-2-music-tutor-session-sesh-jam)
 
-* Deployment instructions
+# Next Steps
 
-* ...
+* Live Chat
+* Upload Files
+* Rate Teachers
+* Make Payments Through App
