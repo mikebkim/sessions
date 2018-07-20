@@ -4,7 +4,9 @@
 
 # Sessions
 
-This is an application that allows students and teachers to connect through music.
+* This is an application that allows students and teachers to connect through music.
+* Schedule appointments as a teacher and start teaching students!
+* Schedule appointments as a student and start learning instruments!
 
 ## Technologies Used
 

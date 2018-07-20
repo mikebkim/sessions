@@ -12,12 +12,8 @@ class ApplicationController < ActionController::Base
         @current_teacher ||= Teacher.find_by(id: session[:teacher_id]) if session[:teacher_id]
     end
 
-    def authorize_student
-        redirect_to login_path, alert: 'Not authorized student!' unless current_student
-    end
-
-    def authorize_teacher
-        redirect_to login_path, alert: 'Not authorized teacher!' unless current_teacher
+    def authorize
+        redirect_to login_path, alert: 'Not authorized student!' if current_student.nil? && current_teacher.nil?
     end
 
 end 

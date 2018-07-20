@@ -1,5 +1,7 @@
 class AppointmentsController < ApplicationController
 
+    before_action :authorize, only: [:create, :destroy]
+
     def index
         if current_student
             @lessons = current_student.lessons

@@ -1,5 +1,7 @@
 class LessonsController < ApplicationController
 
+    before_action :authorize, only: [:create, :destroy]
+
     def index
         @lessons = current_teacher.lessons
         @lesson = Lesson.new
