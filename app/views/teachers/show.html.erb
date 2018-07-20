@@ -6,7 +6,7 @@
             <p> <%= lesson.time.strftime("%m/%d/%Y - %l:%M%p") %> </p>
             <p> <%= lesson.subject %> </p>
             <p> <%= lesson.homework %> </p>
-            <p class="book-btn"> <%= link_to "Book", lesson_appointments_path(lesson), method: :post %> </p>
+            <p> <%= button_to "Book", lesson_appointments_path(lesson), method: :post, class: "book-btn" %> </p>
         </div>
     <% end %>
 <% end %>

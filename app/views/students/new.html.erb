@@ -2,12 +2,10 @@
 <%= form_for @student do |f| %>
   <% if @student.errors.any? %>
     <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
+      <h4>Form is invalid</h4>
         <% for message in @student.errors.full_messages %>
-          <li><%= message %></li>
+          <h4><%= message %></h4>
         <% end %>
-      </ul>
     </div>
   <% end %>
 
